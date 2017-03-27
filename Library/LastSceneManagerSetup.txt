@@ -1,0 +1,4 @@
+sceneSetups:
+- path: "Assets/Drag\xF3n.unity"
+  isLoaded: 1
+  isActive: 1
