@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour {
     public LayerMask QueEsSuelo;
     private Collider2D Colision;
 
+    private Animator Animacion;
+
 
 
 
@@ -18,6 +20,7 @@ public class Movement : MonoBehaviour {
 	void Start () {
         Cuerpo = GetComponent<Rigidbody2D>();
         Colision = GetComponent<Collider2D>();
+        Animacion = GetComponent<Animator>();
 	}
 
     // Update is called once per frame
@@ -33,6 +36,7 @@ public class Movement : MonoBehaviour {
                 Cuerpo.velocity = new Vector2(Cuerpo.velocity.x, FSalto);
             }
         }
-        
+
+        Animacion.SetFloat("velocidad", Cuerpo.velocity.x);
 	}
 }
